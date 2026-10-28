@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Course Feedback</title>
+    </head>
+    <body>
+        <!--
+        Error 1 (line 8 & 10) : Duplicate and incorrect <header></head> tags. the h1 within a single, correct<header>.
+        Error 2 (line 20 ) : Broken table header with<td rating >. Changed to colspan="2"
+        Error 3 (line 28) : table colspan="3" is too large for a 3-column table. changed to colspan="2"
+        Error 4 (line 32 ) : Misplaced table cell text. Text is now enclosed in <td>.
+        Error 5 (line 42 & 44) : Radio buttons have different name.
+        Error 6 (line 41) : Label was associated with an incorrect id . label text is now generic.
+        Error 7 (line 49) : Incorrectly closed </from>tag. changed to </form>
+         -->
+    
+    
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <nav>
+        <a href="#results">Results</a>|<a href="#form">Feedback Form</a>|<a href="#comments">Student Comments</a>
+    </nav>
+
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tables and Forms</td>
+                <td>4.0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+
+            <!--table extension : added rows for week 4 and week 5 , using rowspan for the topic-->
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4.7</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Average Rating</td>
+                <td>4.4</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="form">
+        <h2>Give Your feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            <label for="fullname">Name:</label>
+            <input type="text" id="fullname" name="name">
+            <br><br>
+
+            <!-- Form extenstion: Added email input field-->
+             <label for="email">E-mail:</label>
+             <input type="email" id="email" name="email">
+             <br><br>
+
+             <label>Overall rating:</label><br>
+             <input type="radio" id="good" name="overall_rating" value="good">
+             <label for="good">Good</label>
+
+             <!--form extension: added third radio option average tp the same group-->
+             <input type="radio" id="average" name="overall_rating" value="average">
+             <label for="average">Average</label>
+
+             <input type="radio" id="poor" name="overall_rating" value="poor">
+             <label for="poor">Poor</label>
+             <br><br>
+
+             <!--Form extension: added group of 3 checkboxes for practice topics-->
+             <label>Topics I want to practice more on:</label><br>
+             <input type="checkbox" id="topic1" name="practice_topics" value="Tables">
+             <label for="topic1">Tables</label><br>
+
+             <input type="checkbox" id="topic2" name="practice_topics" value="Forms">
+             <label for="topic2">Forms</label><br>
+
+             <input type="checkbox" id="topic3" name="practice_topics" value="SemanticHTML">
+             <label for="topic3">SemanticHTML</label><br><br>
+
+             <!--Form Extenstion: Added<select> for section/group-->
+                <label for="group">Section/Group:</label>
+                <select id="group" name="section">
+                    <option value="">--Please select--</option>
+                    <option value="GroupA">Group A</option>
+                    <option value="GroupB">Group B</option>
+                    <option value="GroupC">Group C</option>
+                </select><br><br>
+
+                <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!--semantic extension: Added new section for student comments with two articles-->
+    <section id="comments">
+        <h2>Student Comments</h2>
+
+        <article>
+            <h3>Patrick Jane</h3>
+            <p>The course was very useful and the examples were well-structured.</p>
+        </article>
+
+        <article>
+            <h3>John Smith</h3>
+            <p>I appreciated the hands on labs and clear explanations.</p>
+        </article>
+    </section>
+        <!--footer-->
+        <footer>
+            <p>Copyright &copy; 2026 CSF3133.</p>
+        </footer>
+    </body>    
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Faculty Programming Workshop 2026
+        </title>
+    </head>
+
+    <body>
+        <!--Header Section-->
+        <header>
+            <h1>Faculty programming Workshop 2026</h1>
+            <p>Empowering the next generation of coders and innovators.</p>
+        </header>
+
+        <!--Navigation Section-->
+        <nav>
+            <ul>
+                <li><a href="#about">About the Event</a></li>
+                <li><a href="#schedule">Event Schedule</a></li>
+                <li><a href="#register">Registration</a></li>
+            </ul>
+        </nav>
+
+        <!--About Section-->
+        <section id="About">
+            <h2>About the Event</h2>
+
+            <article>
+                <h3>Keynote Speaker: Dr. Patrick Jane</h3>
+                <p>Dr. Patrick Jane is an industry pioneer in Artificial Intelligence and Software Engineering. He will share insights on the future of programming and emerging technologies.</p>
+            </article>
+
+            <article>
+                <h3>Featured Activity: Hackaton Kickoff</h3>
+                <p>Students will team up to solve real-world problems through innovative software solution.
+                    Mentored by experienced faculty and industry experts.
+                </p> 
+            </article>
+        </section>
+
+        <!--Schedule section-->
+        <section id="Schedule">
+            <h2>Event Schedule</h2>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person In Charge</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:30 AM - 09:00 AM</td>
+                        <td>Registration & Welcome Remarks</td>
+                        <td>Main Auditorium</td>
+                        <td>Prof. Stephen Smith</td>
+                    </tr>
+                    <tr>
+                       <td>09:00 AM - 10:30 AM</td>
+                       <td>Keynoe Address : AI & Future</td>
+                       <td>BYOD1</td>
+                       <td>Dr. Patrick Jane</td>
+                    </tr>
+                    <tr>
+                       <td>10:30 AM - 12:30 PM</td>
+                       <td>Hands on Coding Workshop</td>
+                       <td>Lab 3</td>
+                       <td>Dr. Patrick Jane</td>
+                    </tr>
+                    <tr>
+                        <td>12:30 PM - 2:00 PM</td>
+                        <td colspan="3">Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM - 04:30 PM</td>
+                        <td>Hackathon Coding Session</td>
+                        <td>Lab 3</td>
+                        <td>Mr. Eric John</td>
+                    </tr>
+                    <tr>
+                       <td>04:30 PM - 05:00 PM</td> 
+                       <td>Closing ceremony & Awards</td>
+                       <td>Main Auditorium</td>
+                       <td>Prof. Stephen Smith</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--Registration Section-->
+        <section id="register">
+            <h2>Registration</h2>
+            <form action="register.html" method="post">
+                
+                <!--Text inputs with Matching labels-->
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" 
+                           id="fullname"
+                           name="fullname"
+                           required>
+                </div>
+                <br>
+                <div>
+                    <label for="matric">Matric Number:</label>
+                    <input type="text"
+                           id="matric"
+                           name="matric"
+                           required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required>
+                </div>
+                <br>
+                
+                <!-- Radio buttons for year -->
+                 <div>
+                    <label>Year of Study:</label><br>
+                    <input type="radio"
+                           id="year1"
+                           name="year_of_study"
+                           value="Year 1">
+                    <label for="year1">Year 1</label><br>
+
+                    <input type="radio"
+                           id="year2"
+                           name="year_of_study"
+                           value="Year 2">
+                    <label for="year2">Year 2</label><br>
+
+                    <input type="radio"
+                           id="year3"
+                           name="year_of_study"
+                           value="Year 3">
+                    <label for="year3">Year 3</label><br>
+
+                    <input type="radio"
+                           id="year4"
+                           name="year_of_study"
+                           value="Year 4">
+                    <label for="year4">Year 4</label>          
+                 </div>
+                <br>
+
+                <!--Checkboxes for session-->
+                <div>
+                    <label>Sessions to Join(Select at least3):</label><br>
+                    <input type="checkbox"
+                           id="session1"
+                           name="sessions"
+                           value="Keynote">
+                    <label for="session1">Keynote Address</label><br>
+
+                    <input type="checkbox" 
+                           id="session2"
+                           name="sessions"
+                           value="Workshop">
+                    <label for="session2">Hands on Coding Session</label><br>
+
+                    <input type="checkbox"
+                           id="session3"
+                           name="sessions"
+                           value="Hackathon">
+                    <label for="session3">Hackathon Coding Session</label>
+                </div>
+                <br>
+
+                <!--Drop down list for programme or faculty-->
+                <div>
+                    <label for="programme">Programme/Faculty</label>
+                    <select id="programme" name="programme">
+                        <option value="software_engineering">Software Engineering</option>
+                        <option value="data_science">Data Science</option>
+                        <option value="artificial_intelligence">Artificial Intelligence</option>
+                        <option value="information_technology">Information Technology</option>
+                        </select>
+                </div>
+                <br>
+                <div>
+                    <!--submit button-->
+                    <input type="submit" value="Register Now">
+                </div>
+            </form>
+        </section>
+
+        <!--footer-->
+        <footer>
+            <p>Organised by Faculty of Computer Science and Technology</p>
+            <p>&copy; 2026 Universiti Terengganu Mlaysia.All rights reserved.</p>
+        </footer>
+        
+    </body>
+</html>
