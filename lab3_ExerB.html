@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <title>Ticket Booking</title>
+ </head>
+<body>
+    <!--
+     Error 1 (line 1)  : Mssing 'html' in doctype declaration
+     Error 2 (line 18) : Typo in email input type attribute (emaial fixed to email)
+     Error 3 (line 12) : Incorrect string concatenation and element reference in oninput ('adult.value+child.value' with 'kid' fixed to Number-based calculation with 'child')
+     Error 4 (line 32) : Invalid range attributes for rating slider (min='5' max='1' fixed to min='1' max='5')
+     Error 5 (line 38) : Incorrect case for copyright entity
+     Error 6 (line 41) : Stray '54' character removed before closing html tag
+     -->
+
+<div id="header">
+    <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+</div>
+
+<!-- Sidebar added-->
+ <div id="sidebar">
+    <h1>Now Showing</h1>
+    <p><strong>Space Rangers</strong>- PG-13 | <a href="trailer1.html">Wach Trailer</a></p>
+    <p><strong>Kampung Comedy</strong>- U | <a href="trailer2.html">Wach Trailer</a></p>
+    <p><strong>Cyber Mission</strong>- 18 | <a href="trailer1.html">Wach Trailer</a></p>
+ </div>
+
+ <div id="content">
+    <h2>Book Your Ticket</h2>
+    <p>Promotion: tickets &lt; RM 10 for students &amp; staff!</p>
+
+    <form action="booking.php" oninput="total.value=Number(adult.value)+Number(child.value); 
+          price.value='RM '+(Number(adult.value)*12+ Number(child.value)*8);">
+
+          <label for="name">Name:</label>
+          <input type="text"
+                 id="name"
+                 name="name"
+                 placeholder="Enter Your Name"
+                 required autofocus><br>
+
+          <label for="email">Email:</label>
+          <input type="email"
+                 id="email"
+                 name="email"><br>
+
+        
+          <label for="phone">Phone Number:</label>
+          <input type="tel"
+                 id="phone"
+                 name="phone"
+                 placeholder="E012-3456789"
+                 required><br>
+        
+          <label for="date">Show Date:</label>
+          <input type="date"
+                 id="date"
+                 name="date"><br>
+
+          <label for="time">Show Time:</label>
+          <input type="time"
+                 id="time"
+                 name="time"><br>
+
+          <label for="movie">Movie:</label>
+          <input id="movie"
+                 name="movie"
+                 list="movies"><br>
+          <datalist id="movies">
+            <option value="Space Rangers"></option>
+            <option value="Kampung Comedy"></option>
+            <option value="Cyber Mission"></option>
+          </datalist>
+
+          <label for="adult">Adult ticket:</label>
+          <input type="number"
+                 id="adult"
+                 name="adult"
+                 min="0"
+                 value="0">><br>
+
+          <label for="child">Child ticket:</label>
+          <input type="number"
+                 id="child"
+                 name="child"
+                 min="0"
+                 value="0"><br>
+
+          <label for="rating">Rate Our Service:</label>
+          <input type="range"
+                 id="rating"
+                 min="1"
+                 max="5"><br>
+
+         <!-- total price instruction-->
+        Total tickets:<output name="total" for="adult child">0</output><br>
+
+        <input type="Submit" value="Book Now">
+        </form>
+ </div>
+ <div class="clear"></div>
+ <div id="footer">
+    <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM 10 every Tuesday</p>
+ </div>
+</body>
+</html>

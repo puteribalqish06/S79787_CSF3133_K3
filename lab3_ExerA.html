@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Campus Bakery Online Order</title>
+    </head>
+    <body>
+        <!--Header-->
+        <header>
+            <h1>CampusBake&reg; <span>Your Daily Fresh Campus Treat</span></h1>
+        </header>
+
+        <!--navigation-->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#order">Order Now</a>
+        </nav>
+        
+        <!--content-->
+        <div id="content">
+            <p>
+            Welcome to<strong>CampusBake</strong>,where we bake fresh goods
+            <em>every single</em>for our<span>beloved campus community</span>!
+            </p>
+
+            <h2>Place Your Pre-Order</h2>
+            <ul>
+                <li>Freshly baked and ready for pickup.</li>
+                <li>Fast and easy online ordering process.</li>
+            </ul>
+            <div>
+                <form oninput="totalPrice.value=(Number(cupcakes.value)*3.00)+(Number(slices.value)*5.00);">
+                    <!--customer name-->
+                    <p>
+                        <label for="custName">Customer Name:</label><br>
+                        <input type="text" 
+                               id="custName"
+                               placeholder="Enter your full name"
+                               required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" 
+                               id="phone"
+                               name="phone"
+                               required>
+                    </p>
+                    <p>
+                        <label for="email" >E-Mail:</label><br>
+                        <input type="email"
+                            id="email"
+                            name="email"
+                            required>     
+                    </p>
+                    <!--pickup date and time-->
+                    <p>
+                        <label for="pickupDate">PickUp Date</label><br>
+                        <input type="date"
+                               id="pickupDate"
+                               name="pickupDate"
+                               required>  
+                    </p>
+                    <p>
+                        <label for="pickupTime">PickUp Time</label><br>
+                        <input type="time"
+                            id="pickupTime"
+                            name="pickupTime"
+                            required>
+                    </p>
+
+                    <!--flavour with datalist-->
+                    <p>
+                        <label for="flavour">Flavour:</label><br>
+                        <input type="text"
+                            id="flavour"
+                            name="flavour"
+                            list="flavourList" required>
+                        <datalist id="flavourList">
+                            <option value="Chocolate Fudge"></option>
+                            <option value="Vanilla Bean"></option>
+                            <option value="Strawberry Delight"></option>
+                            <option value="Matcha Green Tea"></option>
+                        </datalist>
+                    </p>
+                    <!--icing colour and sweetness level-->
+                    <p>
+                        <label for="icingColour">Icing Colour:</label><br>
+                        <input type="text"
+                               id="icingColour"
+                               name="icingColour">
+                    </p>
+                    <p>
+                        <label for="sweetness">Sweetness Level(1 to 5):</label><br>
+                        <input type="range"
+                               id="sweetness"
+                               name="sweetness"
+                               min="1"
+                               max="5"
+                               step="1">
+                    </p>
+                    <!--price calculator input-->
+                    <h3>Price Calculator</h3>
+                    <p>
+                        <label for="cupcakes">Cupcakes (RM3.00 each):</label><br>
+                        <input type="number"
+                               id="cupcakes"
+                               name="cupcakes"
+                               min="0"
+                               value="0">
+                    </p>
+                    <p>
+                        <label for="slices">Cake Slices (RM 5.00 each):</label><br>
+                        <input type="number"
+                               id="slices"
+                               name="slices"
+                               min="0"
+                               value="0">
+                    </p>
+                    <p>
+                        <strong>Total price (RM): </strong>
+                        <output name="totalPrice"
+                        for="cupcakes slices">0.00</output>
+                    </p>
+                    <!--submit button-->
+                    <p>
+                        <button type="submit">Submit Order</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!--Sidebar-->
+        <div id="sidebar">
+            <h3>Price List</h3>
+            <ul>
+                <li>Cupcakes &mdash; RM 3.00 each</li>
+                <li>Cake Slices &mdash; RM 5.00 each</li>
+                <li>Note: Orders &gt; 10 pieces get a free drink!</li>
+            </ul>
+        </div>
+        <footer>
+            <p>&nbsp; &pound; &euro; &copy; 2026 Campus Bakery. All rights reserved.</p>
+        </footer>
+
+        <!--testing observation-->
+        <!--Testing notes:
+            - Clicking Submit withh all fields empty triggers browser validation alerts for required fields-->
+            - Entering myemail without '@' in the email triggered a validation error 
+    </body>
+</html>
