@@ -1,0 +1,107 @@
+/*---global reset and layout---*/
+*{box-sizing: border-box;}
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5 rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0,05);
+}
+
+/*---navigation bar---*/
+nav ul{
+    list-style-type: none;
+    background-color: #03045e;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/*---interactive link states(correct order: link->visited-> hover->active)---*/
+a:link{
+    color: #0077b6;
+}
+a:visited{
+    color: #5a189a;
+}
+a:hover{
+    background-color: #00b4d8;
+    color: #ffffff;
+}
+a:active{
+    color: #d90429
+}
+
+/*---heading and text deco---*/
+h1{
+    text-decoration: overline;
+}
+h2{
+    text-decoration: underline;
+    color: #03045e;
+}
+.old-price{
+    text-decoration: line-through;
+    color: #8d99ae;
+    margin-right: 8px;
+}
+.price{
+    font-weight: bold;
+    color: #2b9348
+}
+
+/*---video responsiveness---*/
+video{
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+/*--- form styling---*/
+.trip-form{
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    width: 100%;
+}
+.trip-form label{
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.trip-form input[type="text"],
+.trip-form input[type="email"]{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.submit-btn{
+    margin-top: 15px;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.submit-btn:hover{
+    background-color: #03045e
+}
