@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>e-Cafe Campus</title>
+        <!--Link External css-->
+        <link rel="stylesheet" href="cafe.css">
+        <style type="text/css">
+            h1{text-decoration: overline;}
+            p{color: #333333; text-align: justify;}
+            #intro{
+                font-size: 18px;
+                background-color: #FDEBD0;
+            }
+            .highlight{
+                font-weight: bold;
+                color: #C0392B;
+            }
+            .old-price{
+                text-decoration: line-through;
+                color: #7f8c8d;
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Error detection
+            1. Line 9 : list-style-type: no; -> invalid value. fixed to 'none'
+            2. Line 17 : text- decoration: overlined; -> invalid property value. fixed to 'overline'
+            3. Line 19 : p{color #333333; ...} -> missing colo ':' after color property. Fixed to 'color: #333333;'
+            4. Line 22 : highlight {...}-> missing period'.' class selector prefix. Fixed to '.highlight{...}'
+            5. Line 34 : href="menu"-> missinh '#' anchor prefix for internal ID jump. Fixed to href="#menu"
+            6. Line 43&47 : <article id="item"> ->Duplicate ID attribute value used twice. Change to class="item"
+            7. Line 53: <video width="400" height="300"> -> missing 'controls' attribute so the video cannot be played. added controls
+            8. Line 54: <source src="cafe.mp4" type="mp4"> -> incorrect MIME type format. fixed to type="video/mp4"-->
+
+        <header>
+            <h1>e-Cafe Campus</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="menu">
+            <h2>Today's Menu</h2>
+            <p id="intro">Freshly brewed coffee and local delights every day.</p>
+
+            <article class="item">
+                <h3>Kopi Tarik</h3>
+                <p><span class="old-price">RM 4.50</span> Only <span class="highlight">RM 3.50</span></p>
+            </article>
+
+            <article class="item">
+                <h3>Nasi Lemak</h3>
+                <p><span class="old-price">RM 6.50</span> Only <span class="highlight">RM 5.00</span></p>
+            </article>
+        </section>
+
+        <section id="video">
+            <h2>Watch Our Story</h2>
+            <figure>
+                <video controls>
+                    <source src="cafe.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>A quick glimpse behind the scenes at e-Cafe Campus</figcaption>
+            </figure>
+        </section>
+
+        <!--new feedback session-->
+        <section id="feedback">
+            <h2>Customer Feedback Form</h2>
+            <form class="feedback-form" action="#" method="POST">
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="name" required>
+
+                <label for="femail">E-mail:</label>
+                <input type="email" id="femail" name="email" required>
+
+                <label>Visit Type:</label>
+                <label><input type="radio" name="visit_type" value="Dine-in" required>Dine-in</label>
+                <label><input type="radio" name="visit_type" value="Take-away" required>Take-away</label>
+
+                <label>Favourite Items:</label>
+                <label><input type="checkbox" name="fav" value="Coffee">Coffee</label>
+                <label><input type="checkbox" name="fav" value="Nasi Lemak">Nasi Lemak</label>
+                <label><input type="checkbox" name="fav" value="Pastries">Pastries</label>
+
+                <button type = "sumbit" >Send Feedback</button>
+            </form>
+        </section>
+
+        <footer id="contact">
+            <p>&copy; 2026 e-Cafe Campus</p>
+            <address>
+                Reach us at: <a href="mailto:support@cafe.edu.my">support@cafe.edu.my</a>
+            </address>
+        </footer>
+    </body>
+</html>
