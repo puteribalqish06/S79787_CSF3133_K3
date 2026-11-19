@@ -1,0 +1,112 @@
+/*--- general body and typography---*/
+body{
+    font-family: 'Roboto',sans-serif;
+    background-color: #FAF8F5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/*---header with background image---*/
+header{
+    background-image: url("paper.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    text-align: center;
+    padding: 60px 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+header h1{
+    font-family: 'Merriweather',serif;
+    color: #1B4F72;
+    font-size: 2.5 rem;
+    margin: 0 0 10px 0;
+}
+
+header p{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/*--- navigation bar---*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li{
+    float: left;
+}
+li a{
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 700;
+}
+li a:hover{
+    background-color: #111;
+}
+
+/*active navigation link highlight*/
+li a.active{
+    background-color: #04AA6D;
+    color: white;
+}
+
+/*main content and table styling*/
+main{
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+#product{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#product td, #product th{
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+#product th{
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*right align price column header and cells*/
+#product th:last-child,
+#product td:last-child{
+    text-align: right;
+}
+
+#product tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#product tr:hover{
+    background-color: #ddd;
+}
+
+footer{
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}

@@ -1,0 +1,122 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FBF7F0;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header{
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+header h1{
+    font-family: 'Poppins',sans-serif;
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+}
+
+header p{
+    font-size: 1.2 rem;
+    margin: 0;
+}
+
+nav{
+    background-color: #2c2c2c;
+    overflow: hidden;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    float: left;
+}
+
+nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+}
+
+nav li a:hover{
+    background-color: #111;
+}
+
+nav li a.active{
+    background-color: #E67E22;
+    color: white;
+}
+
+main{
+    width: 98%;
+    max-width: 980px;
+    margin: 30px auto;
+}
+
+section{
+    margin-bottom: 40px;
+}
+p{
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/*styled table*/
+#stalls-table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#stalls-table th, #stalls-table td{
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+#stalls-table th{
+    background-color: #E67E22;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 0.5px;
+}
+
+#stalls-table th.price-col, #stalls-table td.price-col{
+    text-align: right;
+}
+
+#stalls-table tr:nth-child(even){
+    background-color: #F9EBEA;
+}
+
+#stalls-table tr:hover{
+    background-color: #FDEBD0;
+}
+
+footer{
+    background-color: #EFE6D8;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+}
